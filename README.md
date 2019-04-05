@@ -1,16 +1,18 @@
+## React introduction tutorials
 
+This repository is a collection of tutorial React apps that showcase different ways to use React concepts, components or dependencies.
+
+This is meant for all NAV employees who are starting now with frontend development, and that feel that they learn much faster if they see working code samples that they can tweak and adapt.
+
+If you would like to see more examples, let me know at Nuno.Cardoso@nav.no.
 
 ## Recommended order:
- 
-* todo-with-tests - This is the basic example, with all logic inside the Todo.js file. 
-     this repo also has a Todo.test.js which showcases good practices in how to test all the functions in Todo.js
 
-* todo-with-redux - When you are confortable with the todo-with-tests, you can see this example. 
-     Here, we add Redux, so we have actions and reducers in their own src folders. 
-     Also, we added the TodoItem.js so we can showcase how we can have Todo.js having TodoItem.js components as 
-     children, and they can dispatch actions that change the state, and Todo.js is getting the changes.
+First, start with todo-with-tests. When you are comfortable with todo-with-tests, continue with todo-with-redux. When you are confortable with Redux concept, then continue with todo-with-hooks.
 
-  - todo-with-hooks - When you are confortable with the todo-with-redux, you can see this example. 
-    This does the same, but without Redux package, and with React hooks (new in React 16.8), and the 
-    function syntax instead of class syntax. 
-   
+* todo-with-tests - This is the basic Todo app example, with all logic inside one single Todo.js file.
+This tutorial also showcases a Todo.test.js with good examples on how to test functions from Todo class.
+
+* todo-with-redux - This is the Todo app with Redux, thus we have actions and reducers in their own folders. Todo.js is connected to Redux, and we added a TodoItem.js so we can demonstrate how we can dispatch actions from a children component (TodoItem.js) that changes the props of the parent component  (Todo.js).
+
+* todo-with-hooks - This is the same Todo app with Redux, but using the React Hooks API (new in React 16.8) instead of the Redux package, for the same effect.
