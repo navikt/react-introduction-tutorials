@@ -1,0 +1,8 @@
+{
+  "short_name": "Todo App",
+  "name": "Todo App, example with Redux",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
