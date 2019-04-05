@@ -8,12 +8,12 @@ export default function Todo () {
   const [newTodo, setNewTodo] = useState('')
 
   useEffect(() => {
-    document.title = `You have ${state.todos.length} items in your Todo list`;
+    document.title = `You have ${state.todo.todos.length} items in your Todo list`;
   }, [state.todos])
 
   function onNewTodoRequest() {
     if (newTodo !== '') {
-      dispatch({
+      dispatch.todo({
         type: 'TODO/ADD',
         payload: {
           todo: newTodo
@@ -28,7 +28,7 @@ export default function Todo () {
   }
 
   function onRemoveAllTodosRequest () {
-    dispatch({
+    dispatch.todo({
       type: 'TODO/REMOVE_ALL'
     });
   }
@@ -39,13 +39,12 @@ export default function Todo () {
     </header>
     <div className='input-group mb-3'>
       <ul className="Todo-list list-group w-100">
-        {state.todos.map((todo, index) => {
+        {state.todo.todos.map((todo, index) => {
           return <TodoItem
             todo={todo}
             index={index}
             canGoUp={index > 0}
-            canGoDown={state.todos.length > 1 && index < state.todos.length - 1}
-            dispatch={dispatch}
+            canGoDown={state.todo.todos.length > 1 && index < state.todo.todos.length - 1}
           />
         })}
       </ul>

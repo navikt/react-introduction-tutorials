@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Store } from './Store'
 
 export default function TodoItem (props) {
+
+  const { state, dispatch } = React.useContext(Store);
 
   const [todo, setTodo] = useState(props.todo)
   const [edit, setEdit] = useState(false)
@@ -19,7 +22,7 @@ export default function TodoItem (props) {
 
   function onEditTodoSave() {
     if (todo !== '') {
-      props.dispatch({
+      dispatch.todo({
         type: 'TODO/EDIT',
         payload: {
           todo: todo,
@@ -37,7 +40,7 @@ export default function TodoItem (props) {
   }
 
   function onRemoveTodoRequest() {
-    props.dispatch({
+    dispatch.todo({
       type: 'TODO/REMOVE',
       payload: {
         index: props.index
@@ -46,7 +49,7 @@ export default function TodoItem (props) {
   }
 
   function onMoveTodoUp(todoIndex) {
-    props.dispatch({
+    dispatch.todo({
       type: 'TODO/MOVE_UP',
       payload: {
         index: props.index
@@ -55,7 +58,7 @@ export default function TodoItem (props) {
   }
 
   function onMoveTodoDown(todoIndex) {
-    props.dispatch({
+    dispatch.todo({
       type: 'TODO/MOVE_DOWN',
       payload: {
         index: props.index
