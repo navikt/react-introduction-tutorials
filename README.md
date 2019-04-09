@@ -1,18 +1,37 @@
 ## React introduction tutorials
 
-This repository is a collection of tutorial React apps that showcase different ways to use React concepts, components or dependencies.
+This repository is a collection of tutorial React apps that showcase different ways to use React concepts, components and dependencies to implement a simple Todo list applications.
 
-This is meant for all NAV employees who are starting now with frontend development, and that feel that they learn much faster if they see working code samples that they can tweak and adapt.
+These tutorials are targeted to all NAV employees who are now starting with frontend development, and feel that they can learn much faster if they have working code samples that they can experiment with.
 
-If you would like to see more examples, let me know at Nuno.Cardoso@nav.no.
+Some Javascript skills are required, yet the examples are written in a way that is easy to follow the programming logic, even if you are not fluent in Javascript. 
 
-## Recommended order:
+In other works, it is OK to start looking at these apps if you are not familiar with Javascript, but if you are serious about learning React, then be also serious about learning Javascript at the same time.   
+
+If you have questions or want to see more examples, let me know at Nuno.Cardoso@nav.no.
+
+## How to start
+
+First, install [nodeJS](https://nodejs.org), or check if you already have it with `node -v`. The node install package [already comes with npm](https://www.npmjs.com/get-npm), so also check `npm -v` to see if you have it.
+
+Now, choose an app name and install `react-create-app` by writing:
+
+     npm install -g react-create-app <your-app-name>
+
+Note: -g means that the package will be installed globally, so you can call the command anywhere in your machine.
+
+With this command, you have created an initial App. 
+
+## Tutorial recommended order:
 
 First, start with todo-with-tests. When you are comfortable with todo-with-tests, continue with todo-with-redux. When you are confortable with Redux concept, then continue with todo-with-hooks.
 
-* todo-with-tests - This is the basic Todo app example, with all logic inside one single Todo.js file.
+### todo-with-tests 
+This is the basic Todo app example, with all logic inside one single Todo.js file.
 This tutorial also showcases a Todo.test.js with good examples on how to test functions from Todo class.
 
-* todo-with-redux - This is the Todo app with Redux, thus we have actions and reducers in their own folders. Todo.js is connected to Redux, and we added a TodoItem.js so we can demonstrate how we can dispatch actions from a children component (TodoItem.js) that changes the props of the parent component  (Todo.js).
+### todo-with-redux 
+This is the Todo app with Redux, thus we have actions and reducers in their own folders. Todo.js is connected to Redux, and we added a TodoItem.js so we can demonstrate how we can dispatch actions from a children component (TodoItem.js) that changes the props of the parent component  (Todo.js).
 
-* todo-with-hooks - This is the same Todo app with Redux, but using the React Hooks API (new in React 16.8) instead of the Redux package, for the same effect.
+### todo-with-hooks
+This is the same Todo app with Redux, but using the React Hooks API (new in React 16.8) instead of the Redux package, for the same effect.
